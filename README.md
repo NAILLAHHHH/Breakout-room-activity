@@ -105,13 +105,7 @@ firestore.rules               # Security rules (see note below)
 firebase.json                 # Firebase project config
 ```
 
-## API Keys & Secrets
 
-Firebase client API keys were removed from this repo after a secret-scanning alert. **If keys were ever pushed, rotate them** in [Google Cloud Console](https://console.cloud.google.com/apis/credentials) → select each key → **Regenerate key**.
-
-Also restrict keys by platform (Android package name, iOS bundle ID, HTTP referrers for web) so leaked keys cannot be abused from other apps.
-
-Old keys remain in git history until you rewrite history or rotate them — rotation is the recommended fix.
 
 ## Security Rules
 
