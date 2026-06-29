@@ -39,16 +39,25 @@ flutter pub get
 
 ### 2. Firebase setup
 
-This repo includes generated Firebase config for project `todolist-3b056`. To use your own project:
+Firebase config files are **not committed** (they contain API keys). Generate them locally:
 
 1. Create a Firebase project and enable **Cloud Firestore**.
-2. Register your app for each target platform you need.
-3. Run `flutterfire configure` and select your project.
-4. Deploy Firestore rules:
+2. Install and log in to FlutterFire CLI:
+
+   ```bash
+   dart pub global activate flutterfire_cli
+   flutterfire configure
+   ```
+
+   This creates `lib/firebase_options.dart` and platform `google-services` / `GoogleService-Info` files.
+
+3. Deploy Firestore rules:
 
    ```bash
    firebase deploy --only firestore:rules
    ```
+
+   Example templates (placeholders only) are in `*.example` files if you prefer manual setup.
 
 ### 3. Firestore index
 
@@ -95,6 +104,14 @@ lib/
 firestore.rules               # Security rules (see note below)
 firebase.json                 # Firebase project config
 ```
+
+## API Keys & Secrets
+
+Firebase client API keys were removed from this repo after a secret-scanning alert. **If keys were ever pushed, rotate them** in [Google Cloud Console](https://console.cloud.google.com/apis/credentials) → select each key → **Regenerate key**.
+
+Also restrict keys by platform (Android package name, iOS bundle ID, HTTP referrers for web) so leaked keys cannot be abused from other apps.
+
+Old keys remain in git history until you rewrite history or rotate them — rotation is the recommended fix.
 
 ## Security Rules
 
