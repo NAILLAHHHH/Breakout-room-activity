@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "409095745497",
+    "project_id": "todolist-3b056",
+    "storage_bucket": "todolist-3b056.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409095745497:android:71470aa50b0c98138373c8",
+        "android_client_info": {
+          "package_name": "com.example.breakout_room_activity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqtwe9X6ODGiZSoz_pKUg6a_sWYKhS9ts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409095745497:android:2c40a4141ba2d2e38373c8",
+        "android_client_info": {
+          "package_name": "com.example.todolist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqtwe9X6ODGiZSoz_pKUg6a_sWYKhS9ts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
